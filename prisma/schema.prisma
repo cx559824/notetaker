@@ -81,7 +81,7 @@ model Note {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-    title     String   
+    title     String
     content   String   @db.Text
     topic     Topic    @relation(fields: [topicId], references: [id])
     topicId   String
